@@ -8,6 +8,13 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-image: url('back.jpg');
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('back.jpg');
+    }
 }
 
 h1{
@@ -75,7 +82,13 @@ header{
     max-height: 110px;
     overflow-y: auto; 
     color: #353535;
+    &:empty::before{
+    content:"Список дел пока пуст";
+    color:#fff
 }
+}
+
+
 .list-item{
     display: flex;
     justify-content: space-between;
