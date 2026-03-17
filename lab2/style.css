@@ -162,6 +162,10 @@ h1 {
     min-width: 0;
 }
 
+.text, .date {
+    margin: 0; 
+}
+
 .text {
     width: 100%;
     text-align: left;
@@ -170,14 +174,16 @@ h1 {
     white-space: nowrap;      
     overflow: hidden;         
     text-overflow: ellipsis;
+    display: block; 
 }
-
 
 .date {
     font-size: 12px;         
     color: #999;             
-    margin-top: 2px;         
-}
+    margin-top: 2px; 
+    display: block;
+}         
+
 
 .checkmark {
     font-size: 22px;
@@ -203,6 +209,10 @@ h1 {
     color: #c8c8c8;
 }
 
+.todo-item input:checked + label .date {
+    color: #ccc;            
+}
+
 .todo-item input:checked + label .checkmark {
     visibility: visible; 
 }
@@ -211,9 +221,6 @@ h1 {
     color: white;
 }
 
-.todo-item input:checked + label .date {
-    color: #ccc;            
-}
 
 footer{
     color: white;
